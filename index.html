@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Madhavi Soni</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio/css/master.css'%}">
+    <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+    .animated_link3 {
+display: inline-block;
+  overflow: hidden;
+
+  vertical-align: top;
+
+  -webkit-perspective: 600px;
+     -moz-perspective: 600px;
+     -ms-perspective: 600px;
+     perspective: 600px;
+
+  -webkit-perspective-origin: 50% 50%;
+     -moz-perspective-origin: 50% 50%;
+     -ms-perspective-origin: 50% 50%;
+     perspective-origin: 50% 50%;
+}
+.animated_link3:hover {text-decoration:none;}
+
+.animated_link3 span {
+  display: block;
+  position: relative;
+  padding: 0 2px;
+border-radius: 5px;
+
+  -webkit-transition: all 400ms ease;
+     -moz-transition: all 400ms ease;
+     -ms-transition: all 400ms ease;
+     transition: all 400ms ease;
+
+  -webkit-transform-origin: 50% 0%;
+     -moz-transform-origin: 50% 0%;
+     -ms-transform-origin: 50% 0%;
+     transform-origin: 50% 0%;
+
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+     -ms-transform-style: preserve-3d;
+     transform-style: preserve-3d;
+}
+.animated_link3:hover span {
+      background: #00929c;
+
+
+      -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+         -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+         -ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+         transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+}
+
+.animated_link3 span:after {
+  content: attr(data-title);
+
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 2px;
+border-radius: 5px;
+
+  color: #333;
+  background: #00929c;
+
+  -webkit-transform-origin: 50% 0%;
+     -moz-transform-origin: 50% 0%;
+     -ms-transform-origin: 50% 0%;
+     transform-origin: 50% 0%;
+
+  -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+     -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+     -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+     transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+}
+
+
+      .footer{
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .button--nina {
+        /* padding: 1em; */
+	      background: #1E90FF;
+	      color: #FFFFFF;
+        margin: auto;
+        overflow: hidden;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+        border-radius:20%
+      }
+      .button--text-thick {
+      font-weight: 500;
+      }
+      /* .button--text-upper{
+        letter-spacing:2px;
+        text-transform:uppercase;
+      } */
+      .button--size-s{
+        font-sixe:14px;
+      }
+      .button{
+        float:left;
+        min-width: 150px;
+        max-width:250px;
+        display: block;
+        margin:auto;
+        border:none;
+        vertical-align: middle;
+        position:absolute;
+        z-index: 1;
+        align-items: flex-start;
+        text-align: center;
+        cursor: default;
+        text-rendering: auto;
+        word-spacing: normal;
+        text-indent: 0px;
+        text-shadow: none;
+        font: 400 13.333px;
+        font-family: 'Gochi Hand',cursive;
+      }
+      .button--nina > span {
+	display: inline-block;
+	padding: 5px;
+	opacity: 0;
+	color: #454A46;
+	-webkit-transform: translate3d(0, -10px, 0);
+	transform: translate3d(0, -10px, 0);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+  .button--nina::before {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 6px;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+      *:before{
+        box-sizing: border-box;
+      }
+      .button--nina:hover {
+	background-color: 	#FFC0CB;
+}
+.button--nina:hover::before {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.button--nina:hover > span {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.button--nina:hover > span:nth-child(1) {
+	-webkit-transition-delay: 0.045s;
+	transition-delay: 0.045s;
+}
+.button--nina:hover > span:nth-child(2) {
+	-webkit-transition-delay: 0.09s;
+	transition-delay: 0.09s;
+}
+.button--nina:hover > span:nth-child(3) {
+	-webkit-transition-delay: 0.135s;
+	transition-delay: 0.135s;
+}
+.button--nina:hover > span:nth-child(4) {
+	-webkit-transition-delay: 0.18s;
+	transition-delay: 0.18s;
+}
+.button--nina:hover > span:nth-child(5) {
+	-webkit-transition-delay: 0.225s;
+	transition-delay: 0.225s;
+}
+.button--nina:hover > span:nth-child(6) {
+	-webkit-transition-delay: 0.27s;
+	transition-delay: 0.27s;
+}
+.button--nina:hover > span:nth-child(7) {
+	-webkit-transition-delay: 0.315s;
+	transition-delay: 0.315s;
+}
+.button--nina:hover > span:nth-child(8) {
+	-webkit-transition-delay: 0.36s;
+	transition-delay: 0.36s;
+}
+.button--nina:hover > span:nth-child(9) {
+	-webkit-transition-delay: 0.405s;
+	transition-delay: 0.405s;
+}
+.button--nina:hover > span:nth-child(10) {
+	-webkit-transition-delay: 0.45s;
+	transition-delay: 0.45s;
+}
+
+      *,{
+        box-sizing: border-box;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      #name{
+        font-famliy:'Gochi Hand', cursive;
+      }
+
+      .maddy{
+        font-family: 'Pacifico', cursive;
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+
+      h5{
+        font-family: 'Satisfy', cursive;
+      }
+
+      /* h1{
+        font-family:'Gochi Hand', cursive;
+      } */
+      .jumbotron-heading
+      {font-family:"'Patrick Hand', cursive;"
+      }
+      .img{
+        border-radius:50%;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 col-md-10 py-4">
+          <h5 class="text-white">About</h5>
+          <p class="text-muted">Playing with Python. Developing Web Apps in Django. Python Developer. A Technical Content Writer. An Amateur Artist.
+<br><br>In Short!?? A Tech and Art Enthusiast</p>
+        </div>
+        <!-- <div align="right"> -->
+        <div class="container d-flex justify-content-between">
+          <!-- <h4 class="text-white">Social</h4> -->
+          <ul class="list-unstyled">
+            <span><a href="https://www.instagram.com/madmandalic/" class="text-black"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></span>&ensp;<span>&ensp;</span>
+            <span><a href="https://www.linkedin.com/in/madhavisoni-903/" class="text-black"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></span>&ensp;<span>&ensp;</span>
+            <span><a href="https://github.com/madlearner"  class="text-black"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></span>&ensp;<span>&ensp;</span>
+            <span><a href="https://twitter.com/madhavisoni_" class="text-black"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></span>&ensp;<span>&ensp;</span>
+            <span><a href="https://www.behance.net/smadhavi30d103" class="text-black"><i class="fa fa-behance fa-2x" aria-hidden="true"></i></a></span>&ensp;<span>&ensp;</span>
+            <span><a href="https://www.youtube.com/channel/UCEmUB5-qSQUtDGRGR-eLteg" class="text-black"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></a></span>
+            <!-- <span><a href="http://madmandalic.blogspot.com/" ><i class="fab fa-blogger-b" aria-hidden="true"></i></a></span> -->
+            <!--<li><a href="#" class="text-white">Email me</a></li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+        <!--<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>-->
+        <strong><a class="animated_link3" href="http://madmandalic.blogspot.com/"><span data-title="Wanna Read?">Madmandalic</span></a></strong>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+
+      <h2>
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Hello!", "I am Madhavi Soni"]'>
+          <span class="wrap"></span></a>
+      </h2>
+      <img class="img"src=".\maddddd.jpg" height="150" alt="MadhaviSoni"></img>
+      <p class="lead text-muted"><br>Hey, Hope you are doing Fantastic! <br> Thanks for visiting the Page <br>Born and raised in Mumbai city.
+         <br>Computer Graduate from University of Mumbai.<br>A Developer.<br>I also write Blog on my Mandala Designs and enjoy doing Mobile Photography
+          <br>Feel free to contact me Anytime!
+      </p>
+      <div class="col-sm-2 offset-md-5 py-2" style="align:center; font-size:15px;">
+        <a href="mailto:madhavi30.ms@gmail.com" class="button button--nina button--round-1 button--text-thick button--inverted" data-text="Say Hi!"><span>E</span><span>M</span><span>A</span><span>I</span><span>L</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<canvas id="canvas"></canvas>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
